@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-game-pink: #FEAEC9;
+  --color-game-blue: #9AD9EA;
+  --color-game-purple: #C7BFE8;
+  --color-game-light: #E8E0EE;
+  --color-game-dark: #372b4c;
+  --font-game: 'Fredoka', cursive, system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #E8E0EE;
+  color: #2e2640;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.font-game {
+  font-family: var(--font-game);
+}
+
+/* Custom 3D puffy button & game effect styles */
+.game-btn-pink {
+  background: #FEAEC9;
+  box-shadow: 0 4px 0 #e685a4, 0 8px 16px rgba(254, 174, 201, 0.4);
+  transition: all 0.15s ease-out;
+}
+.game-btn-pink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #e685a4, 0 12px 20px rgba(254, 174, 201, 0.5);
+}
+.game-btn-pink:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #e685a4, 0 4px 8px rgba(254, 174, 201, 0.4);
+}
+
+.game-btn-blue {
+  background: #9AD9EA;
+  box-shadow: 0 4px 0 #72bfd4, 0 8px 16px rgba(154, 217, 234, 0.4);
+  transition: all 0.15s ease-out;
+}
+.game-btn-blue:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #72bfd4, 0 12px 20px rgba(154, 217, 234, 0.5);
+}
+.game-btn-blue:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #72bfd4, 0 4px 8px rgba(154, 217, 234, 0.4);
+}
+
+.game-btn-purple {
+  background: #C7BFE8;
+  box-shadow: 0 4px 0 #a99ed8, 0 8px 16px rgba(199, 191, 232, 0.4);
+  transition: all 0.15s ease-out;
+}
+.game-btn-purple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #a99ed8, 0 12px 20px rgba(199, 191, 232, 0.5);
+}
+.game-btn-purple:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #a99ed8, 0 4px 8px rgba(199, 191, 232, 0.4);
+}
+
+/* Glassmorphic card styling with gentle lavender border */
+.game-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 30px -8px rgba(96, 75, 133, 0.15), 0 4px 12px rgba(96, 75, 133, 0.08);
+}
+
+/* Pulse animation for the clap signal */
+@keyframes bellPop {
+  0% { transform: scale(0.85); opacity: 0; }
+  50% { transform: scale(1.15) rotate(-6deg); }
+  75% { transform: scale(0.98) rotate(4deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.animate-bell-pop {
+  animation: bellPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2.5s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Office Trivia Showdown",
+  "description": "Interactive Office Trivia Game with spinning wheel contender selector, 16-player bracket, clap signal buzzer, letter hints, and local storage persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
